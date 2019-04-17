@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.HomePage"
+             BackgroundImage="Images/ps4background.png">
+    
+    <ContentPage.Resources>
+        <Style x:Key="GameObjStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="Bisque"/>
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+        <Style x:Key="GameObjDets" TargetType="Label">
+            <Setter Property="TextColor" Value="AliceBlue"/>
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="FontAttributes" Value="Italic"/>
+        </Style>
+        <Style x:Key="BtnStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Black"/>
+            <Setter Property="BorderRadius" Value="7"/>
+            <Setter Property="BorderWidth" Value="3"/>
+            <Setter Property="BorderColor" Value="Black"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+
+        <DataTemplate x:Key="ListTemplate">
+            <ViewCell>
+                <Frame OutlineColor="Aquamarine" Opacity="0.7">
+                    <StackLayout Margin="2,0" Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Name: " Style="{StaticResource GameObjStyle}"/>
+                            <Label Text="{Binding Name}" Style="{StaticResource GameObjDets}"/>
+                        </StackLayout>
+                    
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Developer: " Style="{StaticResource GameObjStyle}"/>
+                            <Label Text="{Binding Developer}" Style="{StaticResource GameObjDets}"/>
+                       
+                            <Label Text="Publisher: " Style="{StaticResource GameObjStyle}"/>
+                            <Label Text="{Binding Publisher}" Style="{StaticResource GameObjDets}"/>
+                    
+                            <Label Text="Genre: " Style="{StaticResource GameObjStyle}"/>
+                            <Label Text="{Binding Genre}" Style="{StaticResource GameObjDets}"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Release: " Style="{StaticResource GameObjStyle}"/>
+                            <Label Text="{Binding Release}" Style="{StaticResource GameObjDets}"/>
+                        </StackLayout>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="Delete Game" Clicked="Delete_Clicked" Style="{StaticResource BtnStyle}"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </ViewCell>
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+
+        <ListView Grid.Row="1" 
+                ItemsSource="{Binding GamesList, Mode=TwoWay}"
+                ItemTemplate="{StaticResource ListTemplate}"
+                SelectedItem="{Binding SelectedGame, Mode=TwoWay}"/>
+    </Grid>
+
+</ContentPage>

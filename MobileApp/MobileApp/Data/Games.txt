@@ -1,0 +1,16 @@
+﻿[
+{"Name":"God of War", "Developer(s)":"SIE Santa Monica Studio", "Publisher(s)":"Sony Interactive Entertainment", "Genre(s)":"Action-adventure", "Release":"20/4/2018"},
+{"Name":"Spiderman", "Developer(s)":"Insomniac Games", "Publisher(s)":"Sony Interactive Entertainment", "Genre(s)":"Action-adventure", "Release":"7/9/2018"},
+{"Name":"Red Dead Redemption II", "Developer(s)":"Rockstar Studios", "Publisher(s)":"Rockstar Games", "Genre(s)":"Action-adventure", "Release":"26/10/2018"},
+{"Name":"Sekiro: Shadows Die Twice", "Developer(s)":"FromSoftware", "Publisher(s)":"Activision", "Genre(s)":"Action-adventure", "Release":"22/3/2019"},
+{"Name":"Days Gone", "Developer(s)":"SIE Bend Studio", "Publisher(s)":"Sony Interactive Entertainment", "Genre(s)":"Action-adventure, Survival horror", "Release":"26/4/2019"},
+{"Name":"Resident Evil 2", "Developer(s)":"Capcom R&D Division 1", "Publisher(s)":"Capcom", "Genre(s)":"Action-adventure, Survival horror", "Release":"25/1/2019"},
+{"Name":"Far Cry New Dawn", "Developer(s)":"Ubisoft Montreal", "Publisher(s)":"Ubisoft", "Genre(s)":"Action-adventure, First-person shooter", "Release":"15/2/2019"},
+{"Name":"Anthem", "Developer(s)":"BioWare", "Publisher(s)":"Electronics Arts", "Genre(s)":"Action role-playing", "Release":"22/2/2019"}
+
+
+
+
+
+
+]

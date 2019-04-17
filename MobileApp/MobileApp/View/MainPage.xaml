@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MobileApp"
+            xmlns:view="clr-namespace:MobileApp.View"
+            x:Class="MobileApp.MainPage"
+             BackgroundImage="Images/mainpagebg.png">
+    
+    <TabbedPage.Children >
+
+        <NavigationPage Title="Home Page"  BarBackgroundColor="DarkBlue">
+            <x:Arguments >
+                <local:HomePage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Add Game"  BarBackgroundColor="DarkBlue">
+            <x:Arguments >
+                <view:AddPage />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+
+</TabbedPage>

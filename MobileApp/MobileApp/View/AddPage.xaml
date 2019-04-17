@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.View.AddPage"
+             BackgroundImage="Images/NewGamePic.jpg">
+
+    <ContentPage.Resources>
+        <Style x:Key="newGameStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="Navy"/>
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+        </Style>
+        <Style x:Key="EntStyle" TargetType="Entry">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="Opacity" Value="0.5"/>
+            <Setter Property="BackgroundColor" Value="Azure"/>
+        </Style>
+        <Style x:Key="BtnStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Black"/>
+            <Setter Property="BorderRadius" Value="5"/>
+            <Setter Property="BorderWidth" Value="2"/>
+            <Setter Property="BorderColor" Value="Blue"/>
+            <Setter Property="TextColor" Value="Blue"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Name:" Style="{StaticResource newGameStyle}"/>
+                <Entry Text="{Binding Name}" x:Name="newName" Placeholder ="Name" Style="{StaticResource EntStyle}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Developer:" Style="{StaticResource newGameStyle}"/>
+                <Entry Text="{Binding Developer}" x:Name="newDev" Placeholder ="Developer" Style="{StaticResource EntStyle}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Publisher:" Style="{StaticResource newGameStyle}"/>
+                <Entry Text="{Binding Publisher}" x:Name="newPub" Placeholder ="Publisher" Style="{StaticResource EntStyle}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Genre:" Style="{StaticResource newGameStyle}"/>
+                <Entry Text="{Binding Genre}" x:Name="newGenre" Placeholder ="Genre" Style="{StaticResource EntStyle}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Release:" Style="{StaticResource newGameStyle}"/>
+                <Entry Text="{Binding Release}" x:Name="newRelease" Placeholder ="Release" Style="{StaticResource EntStyle}"/>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+            <Button Text="Add Game" Clicked="Button_Clicked" Style="{StaticResource BtnStyle}"/>
+        </StackLayout>
+    </Grid>
+
+
+</ContentPage>
